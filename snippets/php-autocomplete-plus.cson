@@ -1,0 +1,145 @@
+'.source.php':
+  'Create PHP function':
+    prefix: 'func'
+    body: '''
+      function ${1:functioName}($2)
+      {
+        // Code...
+        $3
+      }
+    '''
+  'Test if function exist':
+    prefix: 'function_exist'
+    body: '''
+      if (function_exists("$1") )
+      {
+        $2
+      } else {
+        $3
+      }
+    '''
+  'Public function class':
+    'prefix': 'public func'
+    'body': '''
+      /**
+       * @method $1
+       * @return return
+      **/
+      public function $1($2)
+      {$3}
+    '''
+  'Magic __construct() Method':
+    prefix: '__construct'
+    body: '''
+      public function __construct($1)
+      {$2}
+    '''
+  'Magic __destruct() Method':
+    prefix: '__destruct'
+    body: '''
+      public function __destruct()
+      {$2}
+    '''
+  'Magic __call() Method':
+    prefix: '__call'
+    body: '''
+      public function __call()
+      {$1}
+    '''
+  'Magic __callStatic() Method':
+    prefix: '__callStatic'
+    body: '''
+      public function __callStatic()
+      {$1}
+    '''
+  'Magic __get() Method':
+    prefix: '__get'
+    body: '''
+      public function __get()
+      {$1}
+    '''
+  'Magic __set() Method':
+    prefix: '__set'
+    body: '''
+      public function __set($1, $2)
+      {$3}
+    '''
+  'Magic __isset() Method':
+    prefix: '__isset'
+    body: '''
+      public function __isset($1)
+      {$2}
+    '''
+  'Magic __unset() Method':
+    prefix: '__unset'
+    body: '''
+      public function __unset($1)
+      {$2}
+    '''
+  'Magic __sleep() Method':
+    prefix: '__sleep'
+    body: '''
+      public function __sleep()
+      {$1}
+    '''
+  'Implode php function':
+    prefix: 'implode'
+    body: 'implode("$1", ${2:$var})$3'
+  'Explode php function':
+    prefix: 'explode'
+    body: 'explode("$1", ${2:$var})$3'
+  'PHP $_GET global variable':
+    prefix: 'get'
+    body: '$_GET[$1]'
+  'PHP $_POST global variable':
+    prefix: 'post'
+    body: '$_POST[$1] '
+    description: '$_POST global variable'
+  'PHP $_FILES global variable':
+    'prefix': 'file'
+    'body': '$_FILES[$1]'
+    'description': '$_FILES PHP global variable'
+  'var_dump PHP':
+    prefix: 'vard'
+    body: 'var_dump($1);die;'
+    description: 'Inspect variable PHP'
+  'Autoload Composer':
+    prefix: 'autoload'
+    body: "require_once ${1:__DIR__} . '/vendor/autoload.php';$2"
+    description: 'Adding autoload composer'
+  'Create php class':
+    'prefix': 'class'
+    'body': '''
+      namespace MyApp;
+
+      use Some\Class\Outside\Controller;
+      use Some\Class\Outside\Symfony as Sf ;
+      /**
+       * Class description
+      **/
+      class ${1:Classname} extend Controller implements Interface
+      {
+
+        /**
+         * @param param1 param2
+         * @see http://wwww.somelink.com/
+         * @return string
+        **/
+        public function __construct()
+        {
+          parent::__construct();
+        }
+
+        /**
+         * @param param1 param2
+         * @method someMethod
+         * @return string
+        **/
+
+        public function someMethod()
+        {
+          // Code ...
+        }
+      }
+    '''
+    'description': 'Class snippets from php autocomplete plus'

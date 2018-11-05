@@ -1,0 +1,28 @@
+{
+  "author": {
+    "name": "Pascal TOVOHERY",
+    "email": "tovoherypascal@gmail.com",
+    "url": "pascaltovohery.com"
+  },
+  "dependencies": {},
+  "description": "Snippets for native PHP application.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "homepage": "https://github.com/tovohery/php-autocomplete-plus#readme",
+  "keywords": [
+    "atom",
+    "snippets",
+    "php"
+  ],
+  "license": "MIT",
+  "name": "php-autocomplete-plus",
+  "optionalDependencies": {},
+  "readmeFilename": "readme.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tovohery/php-autocomplete-plus"
+  },
+  "version": "0.1.4"
+}
